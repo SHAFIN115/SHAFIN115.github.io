@@ -9,21 +9,28 @@ body {
 .about-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  padding: 40px;
+  padding: 60px 20px;
   color: #ffffff;
   background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
   text-align: center;
+  min-height: 100vh;
 }
 
 h2 {
   font-size: 3.5em;
   color: #ffd700;
   margin-bottom: 0.5em;
-  font-weight: 600;
 }
+h3 {
+    font-size: 2em;
+    color: #00d4ff;
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+  }
 
 .highlight {
   color: #ffd700;
@@ -42,7 +49,7 @@ h2 {
   margin-bottom: 2em;
 }
 
-h3 {
+.section-title {
   font-size: 2em;
   color: #00d4ff;
   margin-top: 2em;
@@ -56,16 +63,14 @@ h3 {
   color: #00d4ff;
 }
 
-.achievements-list,
-.certifications-list {
+.achievements-list, .certifications-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1em;
 }
 
-.achievement-card,
-.certifications-list a {
+.achievement-card, .certification-link {
   font-size: 1.1em;
   background: #16213e;
   padding: 15px;
@@ -78,8 +83,7 @@ h3 {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.achievement-card:hover,
-.certifications-list a:hover {
+.achievement-card:hover, .certification-link:hover {
   background: #1f4068;
   transform: translateY(-3px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
@@ -93,10 +97,17 @@ h3 {
   margin-top: 1.5em;
 }
 
+.tech-icon {
+  font-size: 40px;
+  color: #ffd700;
+  transition: transform 0.3s ease;
+}
+
 .social-links {
-  margin-top: 2em;
-  display: flex;
-  gap: 1.2em;
+    margin-top: 1em;
+    display: flex;
+    gap: 1.5em;
+    justify-content: center;
 }
 
 .social-links a {
@@ -107,4 +118,18 @@ h3 {
 .social-links a:hover {
   color: #1f4068;
   transform: scale(1.2);
+}
+.social-icon {
+    font-size: 40px;
+    color: #ffffff; /* Default icon color */
+    background: linear-gradient(135deg, #ff7e5f, #4a4245); /* Gradient color */
+    border-radius: 50%;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Change gradient on hover */
+    color: #ffffff;
+    transform: scale(1.2);
 }

@@ -53,11 +53,16 @@ const Home = () => (
           <Typed
             className="typed-text"
             strings={[
-              "Software Engineer",
-              "Full Stack Developer",
-              "Machine Learning Enthusiast",
-              "Cloud Services Expert"
-            ]}
+                "Software Engineer",
+                "API Integration Specialist",
+                "React Developer",
+                "Cloud Solutions Architect (AWS)",
+                "Full Stack Developer",
+                "Database Designer",
+                "Frontend Developer",
+                "Backend Engineer",
+                "System Optimizer",
+              ]}
             typeSpeed={60}
             backSpeed={40}
             loop
