@@ -47,7 +47,7 @@
   }
   
   .profile-image {
-    width: 250px; /* Large profile image */
+    width: 250px;
     height: 250px;
     border-radius: 50%;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
@@ -118,16 +118,9 @@
     }
   
     .profile-image {
-        width: 350px; /* Larger size for visibility */
-        height: 250px;
-        border-radius: 50%;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Soft shadow */
-        border: 7px solid #ffd700; /* Golden border for a premium look */
-        transition: transform 0.3s ease; /* Hover effect */
+      width: 200px;
+      height: 200px;
     }
-    .profile-image:hover {
-        transform: scale(1.05); /* Slight scaling effect on hover */
-      }
   
     .text-section {
       margin-left: 0;
@@ -145,6 +138,11 @@
     .nav-link {
       font-size: 1em;
       padding: 0.6em 1.2em;
+    }
+  
+    .tech-icons img {
+      width: 40px;
+      height: 40px;
     }
   }
   
