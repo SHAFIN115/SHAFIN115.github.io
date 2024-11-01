@@ -1,0 +1,116 @@
+/* src/components/About.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 100%;
+  padding: 40px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  text-align: center;
+}
+
+h2 {
+  font-size: 3.5em;
+  color: #ffd700; /* Gold color for main title */
+  margin-bottom: 1em;
+  font-weight: 600;
+}
+
+.highlight {
+  color: #ffd700;
+}
+
+.intro {
+  font-size: 1.3em;
+  line-height: 1.8;
+  margin-bottom: 1.5em;
+}
+
+h3 {
+  font-size: 2em;
+  color: #00d4ff; /* Soft teal/sky blue for section headers */
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.section-icon {
+  color: #00d4ff; /* Match icon color with section header color */
+}
+
+.achievements-list,
+.certifications-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+
+.achievement-card,
+.certifications-list a {
+  font-size: 1.1em;
+  background: #16213e;
+  padding: 15px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  color: #ffd700;
+  text-decoration: none;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.achievement-card:hover,
+.certifications-list a:hover {
+  background: #1f4068;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.tech-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  flex-wrap: wrap;
+  margin-top: 1.5em;
+}
+
+.tech-icons img {
+  width: 55px;
+  height: 55px;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.3));
+}
+
+.tech-icons img:hover {
+  transform: scale(1.2);
+}
+
+.social-links {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  gap: 1.2em;
+}
+
+.social-links a {
+  color: #ffd700;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+  color: #1f4068;
+  transform: scale(1.2);
+}
