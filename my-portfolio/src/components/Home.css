@@ -22,21 +22,52 @@
   .overlay {
     position: relative;
     z-index: 1;
+    width: 100%;
+    max-width: 1200px;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
     padding: 20px;
     backdrop-filter: blur(8px);
   }
   
   .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
     color: #ffffff;
-    max-width: 600px;
+  }
+  
+  .profile-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile-image {
+    width: 250px; /* Large profile image */
+    height: 250px;
+    border-radius: 50%;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    border: 4px solid #ffd700;
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-image:hover {
+    transform: scale(1.05);
+  }
+  
+  .text-section {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+    margin-left: 20px;
   }
   
   h1 {
-    font-size: 2.8em;
+    font-size: 3em;
     font-weight: bold;
     color: #ffd700;
     margin-bottom: 0.5em;
@@ -47,7 +78,7 @@
   }
   
   .typed-text {
-    font-size: 1.4em;
+    font-size: 1.6em;
     color: #ffffff;
     margin-top: 0.3em;
   }
@@ -61,7 +92,7 @@
   .nav-buttons {
     display: flex;
     gap: 1.5em;
-    justify-content: center;
+    justify-content: flex-start;
   }
   
   .nav-link {
@@ -82,12 +113,33 @@
   }
   
   @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+    }
+  
+    .profile-image {
+        width: 350px; /* Larger size for visibility */
+        height: 250px;
+        border-radius: 50%;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Soft shadow */
+        border: 7px solid #ffd700; /* Golden border for a premium look */
+        transition: transform 0.3s ease; /* Hover effect */
+    }
+    .profile-image:hover {
+        transform: scale(1.05); /* Slight scaling effect on hover */
+      }
+  
+    .text-section {
+      margin-left: 0;
+      text-align: center;
+    }
+  
     h1 {
-      font-size: 2em;
+      font-size: 2.5em;
     }
   
     .typed-text {
-      font-size: 1.2em;
+      font-size: 1.4em;
     }
   
     .nav-link {
