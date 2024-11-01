@@ -1,6 +1,7 @@
 // src/components/About.js
 import React from 'react';
 import { FaGithub, FaLinkedin, FaCode, FaAward, FaCertificate } from 'react-icons/fa';
+import { SiJavascript, SiReact, SiNodedotjs, SiPython,  SiAmazonwebservices  } from 'react-icons/si';
 import { motion } from 'framer-motion';
 import './About.css';
 
@@ -74,12 +75,13 @@ const About = () => (
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <img src="/icons/javascript.png" alt="JavaScript" title="JavaScript" />
-      <img src="/icons/react.png" alt="React" title="React" />
-      <img src="/icons/node.png" alt="Node.js" title="Node.js" />
-      <img src="/icons/python.png" alt="Python" title="Python" />
-      <img src="/icons/aws.png" alt="AWS" title="AWS" />
-      {/* Add more icons as needed */}
+            <div className="tech-icons">
+                <SiJavascript size={40} title="JavaScript" />
+                <SiReact size={40} title="React" />
+                <SiNodedotjs size={40} title="Node.js" />
+                <SiPython size={40} title="Python" />
+                <SiAmazonwebservices  size={40} title="AWS" />
+            </div>
     </motion.div>
 
     <div className="social-links">
