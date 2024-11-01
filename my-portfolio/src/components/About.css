@@ -12,7 +12,6 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  max-width: 100%;
   padding: 40px;
   color: #ffffff;
   background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
@@ -21,8 +20,8 @@ body {
 
 h2 {
   font-size: 3.5em;
-  color: #ffd700; /* Gold color for main title */
-  margin-bottom: 1em;
+  color: #ffd700;
+  margin-bottom: 0.5em;
   font-weight: 600;
 }
 
@@ -33,12 +32,19 @@ h2 {
 .intro {
   font-size: 1.3em;
   line-height: 1.8;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
+}
+
+.mission {
+  font-size: 1.2em;
+  font-style: italic;
+  color: #b0c4de;
+  margin-bottom: 2em;
 }
 
 h3 {
   font-size: 2em;
-  color: #00d4ff; /* Soft teal/sky blue for section headers */
+  color: #00d4ff;
   margin-top: 2em;
   display: flex;
   align-items: center;
@@ -47,7 +53,7 @@ h3 {
 }
 
 .section-icon {
-  color: #00d4ff; /* Match icon color with section header color */
+  color: #00d4ff;
 }
 
 .achievements-list,
@@ -87,21 +93,9 @@ h3 {
   margin-top: 1.5em;
 }
 
-.tech-icons img {
-  width: 55px;
-  height: 55px;
-  transition: transform 0.3s ease;
-  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.3));
-}
-
-.tech-icons img:hover {
-  transform: scale(1.2);
-}
-
 .social-links {
   margin-top: 2em;
   display: flex;
-  justify-content: center;
   gap: 1.2em;
 }
 

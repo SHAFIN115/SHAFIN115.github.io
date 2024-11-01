@@ -1,7 +1,7 @@
 // src/components/About.js
 import React from 'react';
 import { FaGithub, FaLinkedin, FaCode, FaAward, FaCertificate } from 'react-icons/fa';
-import { SiJavascript, SiReact, SiNodedotjs, SiPython,  SiAmazonwebservices  } from 'react-icons/si';
+import { SiJavascript, SiReact, SiNodedotjs, SiPython, SiAmazonwebservices } from 'react-icons/si';
 import { motion } from 'framer-motion';
 import './About.css';
 
@@ -22,9 +22,14 @@ const About = () => (
       I'm <span className="highlight">Shafin Junayed</span>, a passionate software engineer specializing in full-stack development and cloud solutions. I thrive on solving complex problems and crafting efficient, scalable applications.
     </motion.p>
 
+    {/* Personal Mission Statement */}
+    <p className="mission">
+      "Driven by curiosity and innovation, I aim to create impactful solutions that make a difference."
+    </p>
+
     <h3><FaCode className="section-icon" /> Professional Experience</h3>
     <p>
-      Currently, I work as a Software Engineer at <span className="highlight">JB Connect Ltd.</span> where I contribute to backend development, API integration, and cloud solutions. Previously, I led full-stack projects during my internship at <span className="highlight">Nagorik Software Company</span>.
+      Currently, I work as a Software Engineer at <span className="highlight">JB Connect Ltd.</span>, contributing to backend development, API integration, and cloud solutions. Previously, I led full-stack projects during my internship at <span className="highlight">Nagorik Software Company</span>.
     </p>
 
     <h3><FaAward className="section-icon" /> Achievements</h3>
@@ -75,15 +80,14 @@ const About = () => (
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-            <div className="tech-icons">
-                <SiJavascript size={40} title="JavaScript" />
-                <SiReact size={40} title="React" />
-                <SiNodedotjs size={40} title="Node.js" />
-                <SiPython size={40} title="Python" />
-                <SiAmazonwebservices  size={40} title="AWS" />
-            </div>
+      <SiJavascript size={40} title="JavaScript" />
+      <SiReact size={40} title="React" />
+      <SiNodedotjs size={40} title="Node.js" />
+      <SiPython size={40} title="Python" />
+      <SiAmazonwebservices size={40} title="AWS" />
     </motion.div>
 
+    {/* Social Links */}
     <div className="social-links">
       <a href="https://github.com/SHAFIN115" target="_blank" rel="noopener noreferrer">
         <FaGithub size={30} />
