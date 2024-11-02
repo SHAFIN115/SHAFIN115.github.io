@@ -75,10 +75,9 @@ const Home = () => (
             <Link to="/skills" className="nav-link">Skills</Link>
             <Link to="/experience" className="nav-link">Experience</Link>
             <Link to="/projects" className="nav-link">Projects</Link>
-            <Link to="/achievements" className="nav-link">Achievements</Link>
             <Link to="/blog" className="nav-link">Blog</Link>
-            <Link to="/opensource" className="nav-link">Open Source</Link>
             <Link to="/contact" className="nav-link">Contact</Link>
+            <Link to="/education" className="nav-link">Education</Link>
           </nav>
         </motion.div>
       </div>

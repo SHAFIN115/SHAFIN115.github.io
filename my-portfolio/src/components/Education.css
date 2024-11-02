@@ -1,0 +1,119 @@
+/* src/components/Education.css */
+.education-container {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    color: #ffffff;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .education-title {
+    font-size: 2.8em;
+    color: #ffd700;
+    margin-bottom: 40px;
+    font-weight: 700;
+    transition: color 0.3s;
+  }
+  
+  .education-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5em;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  .education-card {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background: #1b1b2f;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: #ffd700;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .education-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .education-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+  }
+  
+  .education-card h3 {
+    font-size: 1.5em;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .location {
+    font-size: 1em;
+    color: #b0c4de;
+    margin-bottom: 15px;
+  }
+  
+  .education-details {
+    font-size: 0.9em;
+    color: #a9a9a9;
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .education-details li {
+    margin-bottom: 8px;
+  }
+  
+  .education-card:hover {
+    background: #25274d;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+  }
+  
+  @media (max-width: 992px) {
+    .education-title {
+      font-size: 2.5em;
+    }
+    .education-card {
+      padding: 20px;
+    }
+    .education-logo {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .education-cards {
+      gap: 1em;
+    }
+    .education-title {
+      font-size: 2.2em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .education-title {
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+    .education-logo {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  
