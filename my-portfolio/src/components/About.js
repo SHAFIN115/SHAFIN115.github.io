@@ -1,7 +1,6 @@
 // src/components/About.js
 import React from 'react';
 import { FaGithub, FaLinkedin, FaCode, FaAward, FaCertificate } from 'react-icons/fa';
-import { SiJavascript, SiReact, SiNodedotjs, SiPython, SiAmazonwebservices } from 'react-icons/si';
 import { motion } from 'framer-motion';
 import './About.css';
 
@@ -27,6 +26,15 @@ const About = () => (
       transition={{ delay: 0.3, duration: 0.8 }}
     >
       I'm <span className="highlight">Shafin Junayed</span>, a passionate software engineer specializing in full-stack development and cloud solutions. I thrive on solving complex problems and crafting efficient, scalable applications.
+    </motion.p>
+
+    <motion.p
+      className="background"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.2, duration: 0.8 }}
+    >
+      Experienced Software Engineer with expertise in full-stack development, specialized in both backend and frontend development. Currently at JB Connect Ltd., I integrate APIs, maintain complex systems, and work with AWS cloud solutions.
     </motion.p>
 
     <motion.p
@@ -121,33 +129,24 @@ const About = () => (
       ))}
     </motion.div>
 
+    
+
     <motion.h3
       className="section-title"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 2, duration: 0.8 }}
+      transition={{ delay: 2.2, duration: 0.8 }}
     >
-      My Tech Stack
+      Hobbies & Interests
     </motion.h3>
-    <motion.div
-      className="tech-icons"
-      initial="hidden"
-      animate="visible"
-      transition={{ staggerChildren: 0.1 }}
+    <motion.p
+      className="hobbies-interests"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 2.4, duration: 0.8 }}
     >
-      {[<SiJavascript />, <SiReact />, <SiNodedotjs />, <SiPython />, <SiAmazonwebservices />].map((Icon, index) => (
-        <motion.div
-          key={index}
-          className="tech-icon"
-          whileHover={{ scale: 1.2, rotate: 10 }}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: index * 0.1 }}
-        >
-          {Icon}
-        </motion.div>
-      ))}
-    </motion.div>
+      I enjoy tackling complex coding challenges, staying up-to-date with the latest in technology, and participating in programming contests like Codeforces and ACM ICPC. Additionally, I have a passion for physics and often engage in science Olympiads. In my free time, I love gaming and watching movies to unwind and explore creative narratives.
+    </motion.p>
 
     <h3>Connect with Me</h3>
     <p>Follow my work and connect with me on these platforms:</p>

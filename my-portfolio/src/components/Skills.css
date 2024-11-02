@@ -1,0 +1,113 @@
+/* src/components/Skills.css */
+.skills-container {
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    text-align: center;
+    min-height: 100vh;
+  }
+  
+  .skills-title {
+    font-size: 2.8em;
+    color: #ffd700;
+    margin-bottom: 25px;
+    transition: color 0.3s;
+  }
+  
+  .skills-section {
+    margin: 40px 0;
+  }
+  
+  .skills-section h3 {
+    font-size: 2em;
+    color: #00d4ff;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5em;
+  }
+  
+  .skill-card {
+    width: 140px;
+    padding: 20px;
+    background: #16213e;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: #ffd700;
+  }
+  
+  .skill-card .icon {
+    font-size: 2.5em;
+    color: #00d4ff;
+    transition: transform 0.3s ease, color 0.3s;
+  }
+  
+  .skill-card:hover .icon {
+    color: #ffd700;
+    transform: scale(1.2) rotate(5deg);
+  }
+  
+  .skill-card p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #ffffff;
+  }
+  
+  @media (max-width: 992px) {
+    .skills-title {
+      font-size: 2.5em;
+    }
+    .skills-section h3 {
+      font-size: 1.8em;
+    }
+    .skill-card {
+      width: 120px;
+      padding: 18px;
+    }
+    .skill-card .icon {
+      font-size: 2.2em;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .skills-grid {
+      gap: 1em;
+    }
+    .skill-card {
+      width: 100px;
+      padding: 15px;
+    }
+    .skills-title {
+      font-size: 2.2em;
+    }
+    .skills-section h3 {
+      font-size: 1.6em;
+    }
+    .skill-card .icon {
+      font-size: 2em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .skill-card {
+      width: 90px;
+      padding: 12px;
+    }
+    .skills-title {
+      font-size: 2em;
+    }
+    .skills-section h3 {
+      font-size: 1.4em;
+    }
+    .skill-card .icon {
+      font-size: 1.8em;
+    }
+  }
+  
