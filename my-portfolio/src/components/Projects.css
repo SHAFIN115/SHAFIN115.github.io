@@ -1,0 +1,123 @@
+/* src/components/Projects.css */
+.projects-container {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #243b55, #141e30);
+    color: #ffffff;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .projects-title {
+    font-size: 2.8em;
+    color: #ffd700;
+    margin-bottom: 40px;
+    font-weight: 700;
+    transition: color 0.3s;
+  }
+  
+  .projects-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .projects-section h3 {
+    font-size: 2em;
+    color: #00d4ff;
+    margin-bottom: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+  }
+  
+  .projects-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5em;
+  }
+  
+  .project-card {
+    width: 300px;
+    padding: 20px;
+    background: #1b1b2f;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: #ffd700;
+  }
+  
+  .project-card h4 {
+    font-size: 1.3em;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .project-card p {
+    font-size: 1em;
+    color: #b0c4de;
+  }
+  
+  .project-card:hover {
+    background: #25274d;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+  }
+  
+  .section-icon {
+    color: #00d4ff;
+    font-size: 1.4em;
+  }
+  
+  @media (max-width: 992px) {
+    .projects-title {
+      font-size: 2.5em;
+    }
+    .projects-section h3 {
+      font-size: 1.8em;
+    }
+    .project-card {
+      width: 250px;
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .projects-section h3 {
+      font-size: 1.6em;
+    }
+    .project-card {
+      width: 100%;
+      max-width: 400px;
+      padding: 18px;
+    }
+    .projects-title {
+      font-size: 2.2em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .projects-title {
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+    .projects-section h3 {
+      font-size: 1.5em;
+    }
+    .project-card {
+      width: 100%;
+      max-width: 350px;
+      padding: 15px;
+    }
+  }
+  
