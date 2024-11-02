@@ -1,25 +1,24 @@
-/* src/components/Home.css */
-
 .home-container {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #9ab3f5, #a88acb);
     position: relative;
     overflow: hidden;
-  }
-  
-  .particles-bg {
+    transition: background 0.3s ease-in-out;
+}
+
+.particles-bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 0;
-  }
-  
-  .overlay {
+}
+
+.overlay {
     position: relative;
     z-index: 1;
     width: 100%;
@@ -29,120 +28,145 @@
     justify-content: center;
     padding: 20px;
     backdrop-filter: blur(8px);
-  }
-  
-  .content {
+}
+
+.content {
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 100%;
     color: #ffffff;
-  }
-  
-  .profile-section {
+}
+
+.profile-section {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .profile-image {
+}
+
+.profile-image {
     width: 250px;
     height: 250px;
     border-radius: 50%;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     border: 4px solid #ffd700;
     transition: transform 0.3s ease;
-  }
-  
-  .profile-image:hover {
+}
+
+.profile-image:hover {
     transform: scale(1.05);
-  }
-  
-  .text-section {
+}
+
+.text-section {
     flex: 1;
     max-width: 500px;
     text-align: left;
     margin-left: 20px;
-  }
-  
-  h1 {
+}
+
+h1 {
     font-size: 3em;
     font-weight: bold;
     color: #ffd700;
     margin-bottom: 0.5em;
-  }
-  
-  .highlight {
+}
+
+.highlight {
     color: #ffd700;
-  }
-  
-  .typed-text {
+}
+
+.typed-text {
     font-size: 1.6em;
     color: #ffffff;
     margin-top: 0.3em;
-  }
-  
-  p {
+}
+
+p {
     font-size: 1.2em;
     color: #dcdcdc;
     margin: 1em 0 2em;
-  }
-  
-  .nav-buttons {
+}
+
+/* Navigation Buttons */
+.nav-buttons {
     display: flex;
+    flex-wrap: wrap;
     gap: 1.5em;
     justify-content: flex-start;
-  }
-  
-  .nav-link {
+}
+
+.nav-link {
+    position: relative;
     padding: 0.8em 1.5em;
     font-size: 1.1em;
-    color: #ffffff;
-    border: 2px solid #ffd700;
+    color: #000000; /* Default text color */
+    background: linear-gradient(90deg, #ffd700, #f08a24);
+    background-size: 200% 200%;
     border-radius: 30px;
-    background: transparent;
-    transition: all 0.3s ease;
     text-decoration: none;
-  }
-  
-  .nav-link:hover {
-    background-color: #ffd700;
-    color: #333;
+    transition: all 0.4s ease, transform 0.2s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    z-index: 0;
+}
+
+.nav-link:hover {
+    background-position: right;
     transform: scale(1.1);
-  }
-  
-  @media (max-width: 768px) {
+    color: #000000; /* Text color on hover */
+}
+
+.nav-link:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #f08a24, #ffd700, #9ab3f5, #a88acb);
+    background-size: 400% 400%;
+    border-radius: 30px;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.3s;
+    z-index: -1;
+}
+
+.nav-link:hover:before {
+    opacity: 1;
+    animation: gradient-shift 1s ease forwards;
+}
+
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@media (max-width: 768px) {
     .content {
-      flex-direction: column;
+        flex-direction: column;
     }
-  
+
     .profile-image {
-      width: 200px;
-      height: 200px;
+        width: 200px;
+        height: 200px;
     }
-  
+
     .text-section {
-      margin-left: 0;
-      text-align: center;
+        margin-left: 0;
+        text-align: center;
     }
-  
+
     h1 {
-      font-size: 2.5em;
+        font-size: 2.5em;
     }
-  
+
     .typed-text {
-      font-size: 1.4em;
+        font-size: 1.4em;
     }
-  
+
     .nav-link {
-      font-size: 1em;
-      padding: 0.6em 1.2em;
+        font-size: 1em;
+        padding: 0.6em 1.2em;
     }
-  
-    .tech-icons img {
-      width: 40px;
-      height: 40px;
-    }
-  }
-  
+}
