@@ -27,11 +27,19 @@ const particlesConfig = {
 };
 
 const Home = () => (
-  <div className="home-container">
+  <div
+    className="home-container"
+    style={{
+      backgroundImage: `url(${process.env.PUBLIC_URL + '/self.jpg'})`, // Reference the image from public folder
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }}
+  >
     <Particles className="particles-bg" options={particlesConfig} />
     <div className="overlay">
       <div className="content">
-        {/* Left Column - Profile Image */}
+        {/* Profile Section */}
         <motion.div 
           className="profile-section"
           initial={{ opacity: 0, x: -50 }}
@@ -39,15 +47,6 @@ const Home = () => (
           transition={{ duration: 1 }}
         >
           <img src="/profile.jpg" alt="Profile" className="profile-image" />
-        </motion.div>
-
-        {/* Right Column - Text and Links */}
-        <motion.div 
-          className="text-section"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-        >
           <h1>I'm <span className="highlight">Shafin Junayed</span></h1>
 
           <Typed
@@ -67,9 +66,15 @@ const Home = () => (
             backSpeed={40}
             loop
           />
-          
-          <p>Passionate about creating impactful software solutions that drive success in the digital world.</p>
+        </motion.div>
 
+        {/* Navigation Section */}
+        <motion.div 
+          className="nav-section"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
           <nav className="nav-buttons">
             <Link to="/about" className="nav-link">About Me</Link>
             <Link to="/skills" className="nav-link">Skills</Link>

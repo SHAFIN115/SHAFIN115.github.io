@@ -1,12 +1,26 @@
+/* src/components/Home.css */
 .home-container {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient(135deg, #9ab3f5, #a88acb);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
-    transition: background 0.3s ease-in-out;
+}
+
+/* Dark Overlay with Blue Tint */
+.home-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 40, 0.7); /* Dark blue tint with some transparency */
+    z-index: 0;
 }
 
 .particles-bg {
@@ -15,39 +29,42 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: 1; /* Ensure particles are above the overlay */
 }
 
 .overlay {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     width: 100%;
     max-width: 1200px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px;
-    backdrop-filter: blur(8px);
 }
 
 .content {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    align-items: flex-start;
+    justify-content: space-between;
     width: 100%;
     color: #ffffff;
+    padding-top: 20px;
+    z-index: 3; /* Ensure content is above all other layers */
 }
 
 .profile-section {
-    flex: 1;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .profile-image {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     border: 4px solid #ffd700;
@@ -58,18 +75,11 @@
     transform: scale(1.05);
 }
 
-.text-section {
-    flex: 1;
-    max-width: 500px;
-    text-align: left;
-    margin-left: 20px;
-}
-
 h1 {
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: bold;
     color: #ffd700;
-    margin-bottom: 0.5em;
+    margin-top: 0.5em;
 }
 
 .highlight {
@@ -77,47 +87,47 @@ h1 {
 }
 
 .typed-text {
-    font-size: 1.6em;
+    font-size: 1.5em;
     color: #ffffff;
     margin-top: 0.3em;
+    font-style: italic;
 }
 
-p {
-    font-size: 1.2em;
-    color: #dcdcdc;
-    margin: 1em 0 2em;
-}
-
-/* Navigation Buttons */
-.nav-buttons {
+.nav-section {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1.5em;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 1em;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .nav-link {
-    position: relative;
-    padding: 0.8em 1.5em;
+    padding: 0.7em 1.5em;
     font-size: 1.1em;
-    color: #000000; /* Default text color */
+    color: #000000;
     background: linear-gradient(90deg, #ffd700, #f08a24);
-    background-size: 200% 200%;
     border-radius: 30px;
     text-decoration: none;
-    transition: all 0.4s ease, transform 0.2s ease;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
     overflow: hidden;
-    z-index: 0;
+    font-weight: 600;
 }
 
 .nav-link:hover {
     background-position: right;
     transform: scale(1.1);
-    color: #000000; /* Text color on hover */
 }
 
-.nav-link:before {
+.nav-link::before {
     content: '';
     position: absolute;
     top: 0;
@@ -128,11 +138,11 @@ p {
     background-size: 400% 400%;
     border-radius: 30px;
     opacity: 0;
-    transition: opacity 0.4s ease, transform 0.3s;
+    transition: opacity 0.4s ease;
     z-index: -1;
 }
 
-.nav-link:hover:before {
+.nav-link:hover::before {
     opacity: 1;
     animation: gradient-shift 1s ease forwards;
 }
@@ -145,28 +155,39 @@ p {
 @media (max-width: 768px) {
     .content {
         flex-direction: column;
-    }
-
-    .profile-image {
-        width: 200px;
-        height: 200px;
-    }
-
-    .text-section {
-        margin-left: 0;
-        text-align: center;
+        align-items: center;
     }
 
     h1 {
-        font-size: 2.5em;
+        font-size: 2em;
     }
 
     .typed-text {
-        font-size: 1.4em;
+        font-size: 1.2em;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .nav-buttons {
+        grid-template-columns: repeat(2, auto);
+        gap: 1em;
     }
 
     .nav-link {
         font-size: 1em;
         padding: 0.6em 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .nav-buttons {
+        grid-template-columns: 1fr;
     }
 }
